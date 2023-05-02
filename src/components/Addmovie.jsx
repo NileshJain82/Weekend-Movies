@@ -76,7 +76,7 @@ const AddMovie = () => {
                   />
                 </div>
               </div>
-              <div className="p-2 year-1/2">
+              <div class="p-2 w-1/2">
                 <div class="relative">
                   <label for="email" class="leading-7 text-sm text-gray-300">
                     Year
@@ -91,7 +91,7 @@ const AddMovie = () => {
                   />
                 </div>
               </div>
-              <div class="link">
+              <div class="p-2 w-full">
                 <div class="relative">
                   <label for="message" class="leading-7 text-sm text-gray-300">
                     Image Link
@@ -105,7 +105,7 @@ const AddMovie = () => {
                   />
                 </div>
               </div>
-              <div class="description">
+              <div class="p-2 w-full">
                 <div class="relative">
                   <label for="message" class="leading-7 text-sm text-gray-300">
                     Description
@@ -120,7 +120,7 @@ const AddMovie = () => {
                 </div>
               </div>
               <div class="p-2 w-full">
-                <button onClick={addMovie} class="submit-button">
+                <button onClick={addMovie} class="flex mx-auto text-white bg-green-600 border-0 py-2 px-8 focus:outline-none hover:bg-green-700 rounded text-lg">
                   {loading ? <TailSpin height={25} color="white" /> : 'Submit'}
                 </button>
               </div>

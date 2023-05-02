@@ -8,15 +8,15 @@ const Header = () => {
   const useAppstate = useContext(Appstate);
 
   return (
-    <div className='heading-container'>
-      <Link to={'/'}><h1 className='text'>Filmy<h1 className='text2'>Verse</h1></h1></Link>
+    <div className='sticky z-10 header top-0 text-3xl flex justify-between items-center text-red-500 font-bold p-3 border-b-2 border-gray-500'>
+      <Link to={'/'}><span className='text'>Weekend<span className='text2'>Movies</span></span></Link>
       {useAppstate.login ?
-        <Link className='home-link' to={'/addmovie'}><h1>
-          <Button className="header-button"><AddIcon /> <span className='text2'>Add New</span></Button>
+        <Link to={'/addmovie'}><h1 className='text-lg cursor-pointer flex items-center'>
+          <Button className="header-button">Add New</Button>
       </h1></Link>
       :
-      <Link className='home-link' to={'/login'}><h1 className=''>
-          <Button><span className='text-white font-medium capitalize'>Login</span></Button>
+      <Link to={'/login'}><h1>
+          <Button className = "header-button"><span className='text-white font-medium capitalize'>Login</span></Button>
       </h1></Link>
       }
     </div>

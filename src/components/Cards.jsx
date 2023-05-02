@@ -22,19 +22,18 @@ const Cards = () => {
   },[])
 
   return (
-    <div className="cards">
+    <div className="flex flex-wrap justify-between px-3 mt-2">
     {loading ? <div className="w-full flex justify-center items-center h-96"><ThreeDots height={40} color="white" /></div> : 
       data.map((e, i) => {
         return (
           <Link to={`/detail/${e.id}`}><div key={i} className="card font-medium shadow-lg p-2 hover:-translate-y-3 cursor-pointer mt-6 transition-all duration-500">
-            <img className="poster" src={e.image} />
-            <div className="cards-layout">
-            <h1 className="span-text" >
+            <img className="h-60 md:h-72" src={e.image} />
+            <h1>
               {e.title}
             </h1>
             <h1 className="flex items-center">
-              <span className="span-rating">Rating:</span>
-              <ReactStars className="stars"
+              <span className="text-gray-500 mr-1">Rating:</span>
+              <ReactStars
                 size={20}
                 half={true}
                 value={e.rating/e.rated}
@@ -42,9 +41,8 @@ const Cards = () => {
               />
             </h1>
             <h1>
-              <span className="span-text">Year:</span> {e.year}
+              <span className="text-gray-500">Year:</span> {e.year}
             </h1>
-            </div>
           </div></Link>
         );
       })

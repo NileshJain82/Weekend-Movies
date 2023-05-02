@@ -6,7 +6,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import { ThreeCircles } from 'react-loader-spinner'
 import Reviews from './Reviews'
 
-const Detail = () => {
+const Details = () => {
   const {id} = useParams();
   const [data, setData] = useState({
     title: "",
@@ -55,4 +55,4 @@ const Detail = () => {
   )
 }
 
-export default Detail
+export default Details
