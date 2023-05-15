@@ -30,13 +30,13 @@ const Details = () => {
   },[])
 
   return (
-    <div className='p-4 mt-4 flex flex-col md:flex-row items-center md:items-start w-full justify-center'>
+    <div className='p-4 mt-4 flex flex-col md:flex-row items-start md:items-start w-full '>
     { loading ? <div className='h-96 flex w-full justify-center items-center'><ThreeCircles height={30} color="white" /></div> : 
       <>
-      <img className='h-96 block md:sticky top-24' src={data.image} />
+      <img className='detail-image' src={data.image} />
 
-      <div className='md:ml-4 ml-0 w-full md:w-1/2'>
-        <h1 className='text-3xl font-bold text-gray-400'>{data.title} <span className='text-xl'>({data.year})</span></h1>
+      <div className='md:ml-12 ml-0 w-full md:w-1/2'>
+        <h1 className='text-3xl font-bold text-red-400 capitalize'>{data.title} <span className='text-xl'>({data.year})</span></h1>
 
         <ReactStars
           size={20}
@@ -45,7 +45,7 @@ const Details = () => {
           edit={false}
         />
 
-        <p className='mt-2'>{data.description}</p>
+        <p className='mt-5 mb-4'>{data.description}</p>
 
         <Reviews id={id} prevRating={data.rating} userRated={data.rated} />
       </div>

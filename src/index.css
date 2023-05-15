@@ -4,7 +4,7 @@
 
 
 body {
-  background-color: rgba(26, 22, 22, 0.906);
+  background-color: rgba(0, 0, 0, 0.906);
   color: white;
   font-family: "PT Sans", sans-serif;
   margin: 0;
@@ -21,28 +21,69 @@ body {
 }
 
 .header-button {
-  --b: 2px; /* border thickness */
-  --s: 0.3em; /* size of the corner */
-  --color: #e8ebf3;
-
-  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
-  background: conic-gradient(
-      from 90deg at var(--b) var(--b),
-      #0000 90deg,
-      var(--color) 0
-    )
-    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
-    calc(100% - var(--b) - 2 * var(--_p));
-  transition: 0.3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: 0.6em;
-  font-size: large;
-  border: 0;
+  background-color: #137409;
+  border: 0 solid #E5E7EB;
+  border-radius: 6px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.button:hover {
+  
+.header-button:hover {
   color: #eef42f;
   background-color: rgba(26, 24, 24, 0.623);
 }
+
+
+.image{
+  height: 15rem;
+  width:12rem;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+}
+
+.card-middle{
+  box-shadow: rgba(149, 157, 165, 0.2) 5px 5px 5px;
+  border-radius: 10px; 
+  margin:2rem;
+  padding: 0.5em;
+  background-color: rgb(33, 35, 36);
+  
+}
+
+.card-middle:hover{
+  transform: translateY(-1rem);
+  transition-duration: 1000;
+}
+
+.detail-image{
+  position: sticky;
+  margin-left:4rem;
+
+}
+
